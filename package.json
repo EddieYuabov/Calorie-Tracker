@@ -1,0 +1,29 @@
+{
+  "name": "calorie-tracker",
+  "version": "1.0.0",
+  "description": "![picture](https://www.healthyeating.org/images/default-source/home-0.0/nutrition-topics-2.0/general-nutrition-wellness/2-2-2-3foodgroups_fruits_detailfeature.jpg?sfvrsn=64942d53_4) ## Overview This will essentially be an app to track your daily caloric intake. In this application you will be prompted to submit your name, age, height, and weight. Once you fill everything out you will be directed to the main page. On this page you have the ability to add whatever food you ate along with its calories. It will then display the food and calories on a list and it'll keep track of the total amount of calories. You will also have the option of adding a new item, deleting an item (if you submitted it by accident or you're cheating yourself), and updating an item.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EddieYuabov/Calorie-Tracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EddieYuabov/Calorie-Tracker/issues"
+  },
+  "homepage": "https://github.com/EddieYuabov/Calorie-Tracker#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^6.6.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
