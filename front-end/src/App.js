@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
+import Home from './components/Home'
+import Main from './components/Main'
 import axios from 'axios'
 import './App.css'
 
@@ -35,34 +37,19 @@ function App() {
 
   return (
     <div className="App">
-      <form onSubmit={handleSubmit}>
-        <h1>Add food:</h1>
-        <label htmlFor="name">Food: </label>
-        <input id="name" value={submit.name} onChange={handleSubmitChange} />
-        <label htmlFor="amount"> Calories: </label>
-        <input
-          id="amount"
-          value={submit.amount}
-          onChange={handleSubmitChange}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route
+          path="/main"
+          element={
+            <Main
+              calories={calories}
+              submit={submit}
+              handleSubmitChange={handleSubmitChange}
+            />
+          }
         />
-        <button type="submit">Add</button>
-      </form>
-      <form>
-        <h1>Delete Food:</h1>
-        <label htmlFor="name">Food: </label>
-        <input id="name" />
-        <button type="submit">Add</button>
-      </form>
-      <h1>Output:</h1>
-      {calories.map((item) => (
-        <div key={item._id}>
-          <h3>Food: {item.name}</h3>
-          <h3>Amount of calories: {item.amount}</h3>
-          <br />
-        </div>
-      ))}
-      <br />
-      <h2>Total: </h2>
+      </Routes>
     </div>
   )
 }

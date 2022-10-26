@@ -3,9 +3,9 @@ const Home = () => {
 
     return (
       <div className="home">
-        <h2>Welcome to the home Page!</h2>
+        <h2>Welcome to the Home Page!</h2>
         <br/>
-        <Link to = '/calories'></Link>
+        <Link to = 'Main'>Main</Link>
       </div>
     )
   }
