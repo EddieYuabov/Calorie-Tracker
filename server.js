@@ -41,7 +41,11 @@ app.post('/calories', async (req, res) => {
   console.log(requestBody) // check this
   res.json(createCalories)
 })
-
+//Delete Calories
+app.delete('/calories/:id', async (req, res) => {
+  let deleteCalories = await Calories.findByIdAndDelete(req.params.id)
+  res.json(deleteCalories)
+})
 app.get('/*', (req, res) => {
   res.sendFile(`${__dirname}/front-end/build/index.html`)
 })
