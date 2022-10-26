@@ -6,9 +6,9 @@ function App() {
   useEffect(() => {
     const apiCall = async () => {
       let response = await axios.get('http://localhost:3001/food')
-      return response
+      console.log(response.data)
     }
-    console.log(apiCall())
+    apiCall()
   }, [])
 
   return (

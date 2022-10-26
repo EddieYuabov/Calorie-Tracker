@@ -6,8 +6,9 @@ const { Food, Calories } = require('./models')
 
 const app = express()
 
-app.use(express.json())
+app.use(express.json()) //search
 app.use(cors())
+app.use(express.static(`${__dirname}/front-end/build`))
 
 //FOOD
 //Get foods
@@ -37,10 +38,13 @@ app.post('/calories', async (req, res) => {
   let exampleCaloriesId = '635861db44c547834d6f451a'
   const requestBody = { ...req.body, food: exampleCaloriesId }
   const createCalories = await Calories.create(requestBody)
-  console.log(requestBody)
+  console.log(requestBody) // check this
   res.json(createCalories)
 })
 
+app.get('/*', (req, res) => {
+  res.sendFile(`${__dirname}/front-end/build/index.html`)
+})
 app.listen(PORT, () => {
   console.log(`Express server is listening on port: ${PORT}`)
 })
