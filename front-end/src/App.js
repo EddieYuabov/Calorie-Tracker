@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Routes, Route } from 'react-router-dom'
 import axios from 'axios'
 import './App.css'
 
@@ -15,7 +16,7 @@ function App() {
     caloriesApiCall()
   }, [])
 
-  const handleChange = (event) => {
+  const handleSubmitChange = (event) => {
     updateSubmit({ ...submit, [event.target.id]: event.target.value })
   }
   const handleSubmit = async (event) => {
@@ -37,9 +38,13 @@ function App() {
       <form onSubmit={handleSubmit}>
         <h1>Add food:</h1>
         <label htmlFor="name">Food: </label>
-        <input id="name" value={submit.name} onChange={handleChange} />
+        <input id="name" value={submit.name} onChange={handleSubmitChange} />
         <label htmlFor="amount"> Calories: </label>
-        <input id="amount" value={submit.amount} onChange={handleChange} />
+        <input
+          id="amount"
+          value={submit.amount}
+          onChange={handleSubmitChange}
+        />
         <button type="submit">Add</button>
       </form>
       <form>
