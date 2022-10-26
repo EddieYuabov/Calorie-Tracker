@@ -46,6 +46,7 @@ function App() {
               calories={calories}
               submit={submit}
               handleSubmitChange={handleSubmitChange}
+              handleSubmit={handleSubmit}
             />
           }
         />
