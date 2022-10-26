@@ -23,9 +23,18 @@ function App() {
   const handleChange = (event) => {
     updateSubmit({ ...submit, [event.target.id]: event.target.value })
   }
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault()
-    console.log(submit)
+    let newItem = await axios
+      .post('http://localhost:3001/calories', submit)
+      .then((response) => {
+        return response
+      })
+      .catch((error) => {
+        console.error(error)
+      })
+    updateCalories([...calories, newItem.data])
+    updateSubmit({ name: '', amount: '' })
   }
 
   return (
