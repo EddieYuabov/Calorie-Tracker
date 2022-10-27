@@ -53,6 +53,18 @@ function App() {
   const handleUpdateChange = (event) => {
     setUpdate({ ...update, [event.target.id]: event.target.value })
   }
+  const handleUpdate = async (event) => {
+    event.preventDefault()
+    let updateItem = await axios
+      .put(`http://localhost:3001/calories/${update.id}`, update)
+      .then((response) => {
+        return response
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+    setUpdate({ id: '', name: '', amount: '' })
+  }
 
   return (
     <div className="App">
@@ -74,6 +86,7 @@ function App() {
               handleRemoveChange={handleRemoveChange}
               handleRemove={handleRemove}
               handleUpdateChange={handleUpdateChange}
+              handleUpdate={handleUpdate}
             />
           }
         />

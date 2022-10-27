@@ -26,7 +26,7 @@ const Main = (props) => {
         <button type="submit">Delete</button>
       </form>
       
-      <form>
+      <form onSubmit={props.handleUpdate}>
       <h1>Update Food:</h1>
         <label htmlFor="id">Id: </label>
         <input id="id" value={props.update.id} onChange ={props.handleUpdateChange}/>
