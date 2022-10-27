@@ -60,8 +60,8 @@ const Main = (props) => {
           <br />
         </div>
       ))}
-      <br />
-      <h2>Total: </h2>
+      <hr/>
+      <h2>Total: 330</h2>
       </div>
       </div>
     )

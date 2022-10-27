@@ -10,6 +10,7 @@ function App() {
   const [submit, updateSubmit] = useState({ name: '', amount: '' })
   const [remove, updateRemove] = useState({ id: '' })
   const [update, setUpdate] = useState({ id: '', name: '', amount: '' })
+  const [total, setTotal] = useState(0)
 
   useEffect(() => {
     const caloriesApiCall = async () => {

@@ -11,10 +11,12 @@ button{
 .calories{
   text-align: center;
   display: grid;
-  grid-template-columns: 40px 400px 400px;
+  grid-template-columns: 40px 300px 500px;
 }
 .output{
   margin-left: 200px;
+  margin-top: 10px;
+  outline-style: groove;
 }
 .App-logo {
   height: 40vmin;
