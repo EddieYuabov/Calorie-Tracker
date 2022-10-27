@@ -34,6 +34,20 @@ function App() {
     updateCalories([...calories, newItem.data])
     updateSubmit({ name: '', amount: '' })
   }
+  const handleRemoveChange = (event) => {
+    updateRemove({ ...remove, [event.target.id]: event.target.value })
+  }
+  const handleRemove = async (event) => {
+    event.preventDefault()
+    let deleteItem = await axios
+      .delete('http://localhost:3001/calories/:id', remove)
+      .then((response) => {
+        return response
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+  }
 
   return (
     <div className="App">
@@ -45,8 +59,11 @@ function App() {
             <Main
               calories={calories}
               submit={submit}
+              remove={remove}
               handleSubmitChange={handleSubmitChange}
               handleSubmit={handleSubmit}
+              handleRemoveChange={handleRemoveChange}
+              handleRemove={handleRemove}
             />
           }
         />

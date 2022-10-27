@@ -5,6 +5,7 @@ const Main = (props) => {
       
       <div className="calories">
       <Link to = '/'>Home</Link>
+      
       <form onSubmit={props.handleSubmit}>
         <h1>Add food:</h1>
         <label htmlFor="name">Food: </label>
@@ -17,17 +18,20 @@ const Main = (props) => {
         />
         <button type="submit">Add</button>
       </form>
+
       <form>
         <h1>Delete Food:</h1>
         <label htmlFor="name">Food: </label>
-        <input id="name" />
-        <button type="submit">Add</button>
+        <input id="name" value = {props.remove.id} onChange={props.handleRemoveChange}/>
+        <button type="submit">Delete</button>
       </form>
+      
       <h1>Output:</h1>
       {props.calories.map((item) => (
         <div key={item._id}>
           <h3>Food: {item.name}</h3>
           <h3>Amount of calories: {item.amount}</h3>
+          <h5>ID: {item._id}</h5>
           <br />
         </div>
       ))}
