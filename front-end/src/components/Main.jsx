@@ -30,9 +30,9 @@ const Main = (props) => {
       <h1>Update Food:</h1>
         <label htmlFor="id">Id: </label>
         <input id="id" value={props.update.id} onChange ={props.handleUpdateChange}/>
-        <label> Food</label>
+        <label> Food: </label>
         <input id='name' value={props.update.name} onChange={props.handleUpdateChange}/>
-        <label> Calories</label>
+        <label> Calories: </label>
         <input id='amount' value={props.update.amount} onChange={props.handleUpdateChange}/>
         <button type="submit">Update</button>
       </form>
