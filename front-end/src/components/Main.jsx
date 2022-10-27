@@ -29,11 +29,11 @@ const Main = (props) => {
       <form>
       <h1>Update Food:</h1>
         <label htmlFor="id">Id: </label>
-        <input id="id"/>
+        <input id="id" value={props.update.id} onChange ={props.handleUpdateChange}/>
         <label>Food</label>
-        <input/>
+        <input id='name'/>
         <label>Calories</label>
-        <input/>
+        <input id='amount'/>
         <button type="submit">Update</button>
       </form>
       

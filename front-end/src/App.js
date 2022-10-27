@@ -50,7 +50,9 @@ function App() {
       })
     updateRemove({ id: '' })
   }
-  const handleUpdateChange = (event) => {}
+  const handleUpdateChange = (event) => {
+    setUpdate({ ...update, [event.target.id]: event.target.value })
+  }
 
   return (
     <div className="App">
@@ -66,10 +68,12 @@ function App() {
               calories={calories}
               submit={submit}
               remove={remove}
+              update={update}
               handleSubmitChange={handleSubmitChange}
               handleSubmit={handleSubmit}
               handleRemoveChange={handleRemoveChange}
               handleRemove={handleRemove}
+              handleUpdateChange={handleUpdateChange}
             />
           }
         />
