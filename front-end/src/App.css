@@ -34,10 +34,16 @@ button{
   margin-left: 25px;
 }
 .updateIdInput{
-  margin-left: 15px;
+  margin-left: 20px;
 }
 .updateIdLabel{
-  margin-left: 25px;
+  margin-left: 23px;
+}
+.updateFoodInput{
+  margin-left: 10px;
+}
+.updateFoodLabel{
+  margin-left: 12px;
 }
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

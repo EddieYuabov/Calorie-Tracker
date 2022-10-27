@@ -39,12 +39,12 @@ const Main = (props) => {
         <input className="updateIdInput" id="id" value={props.update.id} onChange ={props.handleUpdateChange}/>
         <br/>
         <br/>
-        <label> Food: </label>
-        <input id='name' value={props.update.name} onChange={props.handleUpdateChange}/>
+        <label className="updateFoodLabel"> Food: </label>
+        <input className="updateFoodInput" id='name' value={props.update.name} onChange={props.handleUpdateChange}/>
         <br/>
         <br/>
-        <label> Calories: </label>
-        <input id='amount' value={props.update.amount} onChange={props.handleUpdateChange}/>
+        <label > Calories: </label>
+        <input  id='amount' value={props.update.amount} onChange={props.handleUpdateChange}/>
         <br/>
         <br/>
         <button type="submit">Update</button>
