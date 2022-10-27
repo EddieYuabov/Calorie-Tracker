@@ -9,6 +9,7 @@ function App() {
   const [calories, updateCalories] = useState([])
   const [submit, updateSubmit] = useState({ name: '', amount: '' })
   const [remove, updateRemove] = useState({ id: '' })
+  const [update, setUpdate] = useState({ id: '', name: '', amount: '' })
 
   useEffect(() => {
     const caloriesApiCall = async () => {
@@ -49,6 +50,7 @@ function App() {
       })
     updateRemove({ id: '' })
   }
+  const handleUpdateChange = (event) => {}
 
   return (
     <div className="App">
