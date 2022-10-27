@@ -63,7 +63,6 @@ function App() {
       })
     setUpdate({ id: '', name: '', amount: '' })
   }
-
   return (
     <div className="App">
       <Routes>

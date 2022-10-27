@@ -6,6 +6,7 @@ const Main = (props) => {
       <div className="calories">
       <Link to = '/'>Home</Link>
       
+      <div className="forms">
       <form onSubmit={props.handleSubmit}>
         <h1>Add food:</h1>
         <label htmlFor="name">Food: </label>
@@ -36,7 +37,8 @@ const Main = (props) => {
         <input id='amount' value={props.update.amount} onChange={props.handleUpdateChange}/>
         <button type="submit">Update</button>
       </form>
-      
+      </div>
+      <div className="output">
       <h1>Output:</h1>
       {props.calories.map((item) => (
         <div key={item._id}>
@@ -48,6 +50,7 @@ const Main = (props) => {
       ))}
       <br />
       <h2>Total: </h2>
+      </div>
       </div>
     )
   }
