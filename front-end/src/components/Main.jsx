@@ -11,12 +11,16 @@ const Main = (props) => {
         <h1>Add food:</h1>
         <label htmlFor="name">Food: </label>
         <input id="name" value={props.submit.name} onChange={props.handleSubmitChange} />
+        <br/>
+        <br/>
         <label htmlFor="amount"> Calories: </label>
         <input
           id="amount"
           value={props.submit.amount}
           onChange={props.handleSubmitChange}
         />
+        <br/>
+        <br/>
         <button type="submit">Add</button>
       </form>
 
@@ -24,6 +28,8 @@ const Main = (props) => {
         <h1>Delete Food:</h1>
         <label htmlFor="id">Id: </label>
         <input id="id" value = {props.remove.id} onChange={props.handleRemoveChange}/>
+        <br/>
+        <br/>
         <button type="submit">Delete</button>
       </form>
       
@@ -31,10 +37,16 @@ const Main = (props) => {
       <h1>Update Food:</h1>
         <label htmlFor="id">Id: </label>
         <input id="id" value={props.update.id} onChange ={props.handleUpdateChange}/>
+        <br/>
+        <br/>
         <label> Food: </label>
         <input id='name' value={props.update.name} onChange={props.handleUpdateChange}/>
+        <br/>
+        <br/>
         <label> Calories: </label>
         <input id='amount' value={props.update.amount} onChange={props.handleUpdateChange}/>
+        <br/>
+        <br/>
         <button type="submit">Update</button>
       </form>
       </div>
