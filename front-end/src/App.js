@@ -12,6 +12,7 @@ function App() {
   const [update, setUpdate] = useState({ id: '', name: '', amount: '' })
   const [total, setTotal] = useState(0)
 
+  // Use Effect
   useEffect(() => {
     const caloriesApiCall = async () => {
       let calResponse = await axios.get('http://localhost:3001/calories')
@@ -20,6 +21,7 @@ function App() {
     caloriesApiCall()
   }, [])
 
+  //Handle Change for Add
   const handleSubmitChange = (event) => {
     updateSubmit({ ...submit, [event.target.id]: event.target.value })
   }
@@ -35,7 +37,10 @@ function App() {
       })
     updateCalories([...calories, newItem.data])
     updateSubmit({ name: '', amount: '' })
+    handleTotal()
   }
+
+  //Handle Change for Delete
   const handleRemoveChange = (event) => {
     updateRemove({ ...remove, [event.target.id]: event.target.value })
   }
@@ -49,7 +54,10 @@ function App() {
         console.log(error)
       })
     updateRemove({ id: '' })
+    handleTotal()
   }
+
+  //Handle Change for Update
   const handleUpdateChange = (event) => {
     setUpdate({ ...update, [event.target.id]: event.target.value })
   }
@@ -63,6 +71,13 @@ function App() {
         console.log(error)
       })
     setUpdate({ id: '', name: '', amount: '' })
+    handleTotal()
+  }
+  //Handle Change for Total
+  const handleTotal = () => {
+    let total = 0
+    total += parseInt(calories.amount)
+    setTotal(total)
   }
   return (
     <div className="App">
@@ -79,12 +94,14 @@ function App() {
               submit={submit}
               remove={remove}
               update={update}
+              total={total}
               handleSubmitChange={handleSubmitChange}
               handleSubmit={handleSubmit}
               handleRemoveChange={handleRemoveChange}
               handleRemove={handleRemove}
               handleUpdateChange={handleUpdateChange}
               handleUpdate={handleUpdate}
+              handleTotal={handleTotal}
             />
           }
         />
