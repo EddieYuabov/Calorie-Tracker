@@ -19,11 +19,22 @@ const Main = (props) => {
         <button type="submit">Add</button>
       </form>
 
-      <form>
+      <form onSubmit={props.handleRemove}>
         <h1>Delete Food:</h1>
-        <label htmlFor="name">Food: </label>
-        <input id="name" value = {props.remove.id} onChange={props.handleRemoveChange}/>
+        <label htmlFor="id">Id: </label>
+        <input id="id" value = {props.remove.id} onChange={props.handleRemoveChange}/>
         <button type="submit">Delete</button>
+      </form>
+      
+      <form>
+      <h1>Update Food:</h1>
+        <label htmlFor="id">Id: </label>
+        <input id="id"/>
+        <label>Food</label>
+        <input/>
+        <label>Calories</label>
+        <input/>
+        <button type="submit">Update</button>
       </form>
       
       <h1>Output:</h1>

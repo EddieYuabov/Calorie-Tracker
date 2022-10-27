@@ -46,6 +46,16 @@ app.delete('/calories/:id', async (req, res) => {
   let deleteCalories = await Calories.findByIdAndDelete(req.params.id)
   res.json(deleteCalories)
 })
+//Update Calories
+app.put('/calories/:id', async (req, res) => {
+  let updateCalories = await Calories.findByIdAndUpdate(
+    req.params.id,
+    req.body,
+    { new: true }
+  )
+  res.json(updateCalories)
+})
+
 app.get('/*', (req, res) => {
   res.sendFile(`${__dirname}/front-end/build/index.html`)
 })

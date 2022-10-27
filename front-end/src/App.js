@@ -8,7 +8,7 @@ import './App.css'
 function App() {
   const [calories, updateCalories] = useState([])
   const [submit, updateSubmit] = useState({ name: '', amount: '' })
-  const [remove, updateRemove] = useState({ name: '' })
+  const [remove, updateRemove] = useState({ id: '' })
 
   useEffect(() => {
     const caloriesApiCall = async () => {
@@ -40,13 +40,14 @@ function App() {
   const handleRemove = async (event) => {
     event.preventDefault()
     let deleteItem = await axios
-      .delete('http://localhost:3001/calories/:id', remove)
+      .delete(`http://localhost:3001/calories/${remove.id}`)
       .then((response) => {
         return response
       })
       .catch((error) => {
         console.log(error)
       })
+    updateRemove({ id: '' })
   }
 
   return (
@@ -57,6 +58,9 @@ function App() {
           path="/main"
           element={
             <Main
+              name={submit.name}
+              amount={submit.amount}
+              item={submit.item}
               calories={calories}
               submit={submit}
               remove={remove}
