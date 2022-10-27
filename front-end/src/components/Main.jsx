@@ -33,7 +33,7 @@ const Main = (props) => {
         <label>Food</label>
         <input id='name' value={props.update.name} onChange={props.handleUpdateChange}/>
         <label>Calories</label>
-        <input id='amount'/>
+        <input id='amount' value={props.update.amount} onChange={props.handleUpdateChange}/>
         <button type="submit">Update</button>
       </form>
       
