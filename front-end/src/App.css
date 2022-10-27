@@ -9,6 +9,7 @@ button{
 }
 
 .calories{
+  text-align: center;
   display: grid;
   grid-template-columns: 40px 400px 400px;
 }
@@ -20,6 +21,24 @@ button{
   pointer-events: none;
 }
 
+.addFoodInput{
+  margin-left: 10px;
+}
+.addFoodLabel{
+  margin-left: 11px;
+}
+.deleteInput{
+  margin-left: 15px;
+}
+.deleteLabel{
+  margin-left: 25px;
+}
+.updateIdInput{
+  margin-left: 15px;
+}
+.updateIdLabel{
+  margin-left: 25px;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
