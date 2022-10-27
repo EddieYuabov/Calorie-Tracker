@@ -5,7 +5,7 @@ button{
   background-color: white;
 }
 .home{
-  display:grid;
+  text-align: center;
 }
 
 .calories{
