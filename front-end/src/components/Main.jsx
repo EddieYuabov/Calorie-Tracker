@@ -1,4 +1,5 @@
 import {Link} from "react-router-dom"
+import Home from "./Home"
 
 const Main = (props) => {
     return (
@@ -51,6 +52,7 @@ const Main = (props) => {
       </div>
       <div className="output">
       <h1>Foods:</h1>
+      <hr/>
       {props.calories.map((item) => (
         <div key={item._id}>
           <h3>Food: {item.name}</h3>
@@ -62,6 +64,7 @@ const Main = (props) => {
       <hr/>
       <button className="calculate-button" onClick={props.handleTotal}>Calculate</button>
       <h2 className="total" >Total: {props.total}</h2>
+      <h2>Goal: {props.goalAmount}</h2>
       </div>
   
       <Link className="home-link" to = '/'>Home</Link>

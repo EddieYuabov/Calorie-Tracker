@@ -11,6 +11,7 @@ function App() {
   const [remove, updateRemove] = useState({ id: '' })
   const [update, setUpdate] = useState({ id: '', name: '', amount: '' })
   const [total, setTotal] = useState(0)
+  const [goal, setGoal] = useState({ amount: '' })
 
   // Use Effect
   useEffect(() => {
@@ -76,13 +77,24 @@ function App() {
       setTotal(total + parseInt(calorie.amount))
     })
   }
-  //Sets opacity
-  const setOpacity = () => {}
+  //Set Goal
+  const handleGoalChange = (event) => {
+    setGoal({ ...goal, [event.target.id]: event.target.value })
+  }
 
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route
+          path="/"
+          element={
+            <Home
+              amount={goal.amount}
+              goal={goal}
+              handleGoalChange={handleGoalChange}
+            />
+          }
+        />
         <Route
           path="/main"
           element={
@@ -102,6 +114,7 @@ function App() {
               handleUpdateChange={handleUpdateChange}
               handleUpdate={handleUpdate}
               handleTotal={handleTotal}
+              goalAmount={goal.amount}
             />
           }
         />
