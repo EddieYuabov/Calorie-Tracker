@@ -64,7 +64,7 @@ const Main = (props) => {
       <h2 className="total" >Total: {props.total}</h2>
       </div>
   
-      <Link className="homeLink" to = '/'>Home</Link>
+      <Link className="home-link" to = '/'>Home</Link>
       </div>
       
     )

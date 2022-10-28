@@ -1,6 +1,14 @@
 html{
   background-image: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fsavonfoodssupermarket.com%2Fwp-content%2Fuploads%2F2017%2F06%2FBackgroud-img.jpg&f=1&nofb=1&ipt=8b484ef18fbcd68ad434947c6703551cee66c82dcc349f5f3eee41a72572c014&ipo=images");
 }
+h1{
+  text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+  1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff
+}
+h3{
+  text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+  1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff
+}
 button{
   background-color: white;
   cursor: pointer;
@@ -10,10 +18,15 @@ button{
 }
 .form-headers{
   font-size:20px;
-  color:white;
+  color:black;
 }
 .color{
   color:white;
+}
+.home-link{
+color:white;
+margin-top: 10px;
+margin-right: 350px;
 }
 .calories{
   text-align: center;
@@ -25,6 +38,8 @@ button{
   margin-top: 10px;
   display: flex;
   outline-style: groove;
+  outline-color: white;
+  background-color: rgb(0, 0, 0,.5);
 }
 .output{
   margin-right: 10px;
