@@ -8,45 +8,29 @@ button{
 .home{
   text-align: center;
 }
-
+.form-headers{
+  font-size:20px
+}
 .calories{
   text-align: center;
   display: grid;
   grid-template-columns:1fr 3fr;
 }
-.output{
-margin-right: 10px;
+.forms{
+  margin-left: 10px;
   margin-top: 10px;
+  display: flex;
+  outline-style: groove;
+}
+.output{
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-left: 25px;
   outline-style: groove;
 }
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
-
-.addFoodInput{
-  margin-left: 10px;
-}
-.addFoodLabel{
-  margin-left: 11px;
-}
-.deleteInput{
-  margin-left: 15px;
-}
-.deleteLabel{
-  margin-left: 25px;
-}
-.updateIdInput{
-  margin-left: 20px;
-}
-.updateIdLabel{
-  margin-left: 23px;
-}
-.updateFoodInput{
-  margin-left: 10px;
-}
-.updateFoodLabel{
-  margin-left: 12px;
 }
 .homeLink{
 

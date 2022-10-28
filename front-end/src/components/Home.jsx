@@ -3,10 +3,10 @@ const Home = () => {
 
     return (
       <div className="home">
-        <h2>Welcome to the Home Page!</h2>
+        <h1>Calorie Tracker</h1>
         <br/>
         <form>
-            <h1>Fill out form and press submit when finished</h1>
+            <h2>Fill out form and press submit when finished</h2>
         <label>Name: </label>
         <input/>
         <br/>
