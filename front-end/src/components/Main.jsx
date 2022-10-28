@@ -4,7 +4,6 @@ const Main = (props) => {
     return (
       
       <div className="calories">
-      <Link to = '/'>Home</Link>
       
       <div className="forms">
       <form onSubmit={props.handleSubmit}>
@@ -61,9 +60,13 @@ const Main = (props) => {
         </div>
       ))}
       <hr/>
+      <button onClick={props.handleTotal}>Calculate</button>
       <h2>Total: {props.total}</h2>
       </div>
+  
+      <Link className="homeLink" to = '/'>Home</Link>
       </div>
+      
     )
   }
   

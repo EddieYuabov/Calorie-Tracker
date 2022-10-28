@@ -37,7 +37,6 @@ function App() {
       })
     updateCalories([...calories, newItem.data])
     updateSubmit({ name: '', amount: '' })
-    handleTotal()
   }
 
   //Handle Change for Delete
@@ -54,7 +53,6 @@ function App() {
         console.log(error)
       })
     updateRemove({ id: '' })
-    handleTotal()
   }
 
   //Handle Change for Update
@@ -71,13 +69,12 @@ function App() {
         console.log(error)
       })
     setUpdate({ id: '', name: '', amount: '' })
-    handleTotal()
   }
   //Handle Change for Total
   const handleTotal = () => {
-    let total = 0
-    total += parseInt(calories.amount)
-    setTotal(total)
+    calories.forEach((calorie) => {
+      setTotal(total + parseInt(calorie.amount))
+    })
   }
   return (
     <div className="App">
