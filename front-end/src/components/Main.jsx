@@ -1,5 +1,4 @@
 import {Link} from "react-router-dom"
-import Home from "./Home"
 
 const Main = (props) => {
     return (
@@ -27,7 +26,7 @@ const Main = (props) => {
       <form onSubmit={props.handleRemove}>
         <h1 className="form-headers">Delete Food</h1>
         <label className="color" htmlFor="id">Id: </label>
-        <input className="deleteInput" id="id" value = {props.remove.id} onChange={props.handleRemoveChange}/>
+        <input placeholder="     Copy and Paste ID" className="deleteInput" id="id" value = {props.remove.id} onChange={props.handleRemoveChange}/>
         <br/>
         <br/>
         <button type="submit">Delete</button>
@@ -36,7 +35,7 @@ const Main = (props) => {
       <form onSubmit={props.handleUpdate}>
       <h1 className="form-headers">Update Food</h1>
         <label className="color" htmlFor="id">Id: </label>
-        <input className="updateIdInput" id="id" value={props.update.id} onChange ={props.handleUpdateChange}/>
+        <input placeholder="     Copy and Paste ID" className="updateIdInput" id="id" value={props.update.id} onChange ={props.handleUpdateChange}/>
         <br/>
         <br/>
         <label className="color"> Food: </label>

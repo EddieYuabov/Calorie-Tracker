@@ -74,7 +74,8 @@ function App() {
   //Handle Change for Total
   const handleTotal = () => {
     calories.forEach((calorie) => {
-      setTotal(total + parseInt(calorie.amount))
+      let amount = parseInt(calorie.amount)
+      setTotal(total + amount)
     })
   }
   //Set Goal
