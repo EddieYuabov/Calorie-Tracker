@@ -1,5 +1,5 @@
-.App {
-  background-color: white;
+html{
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fsavonfoodssupermarket.com%2Fwp-content%2Fuploads%2F2017%2F06%2FBackgroud-img.jpg&f=1&nofb=1&ipt=8b484ef18fbcd68ad434947c6703551cee66c82dcc349f5f3eee41a72572c014&ipo=images");
 }
 button{
   background-color: white;
@@ -9,7 +9,11 @@ button{
   text-align: center;
 }
 .form-headers{
-  font-size:20px
+  font-size:20px;
+  color:white;
+}
+.color{
+  color:white;
 }
 .calories{
   text-align: center;
@@ -28,12 +32,12 @@ button{
   margin-left: 25px;
   outline-style: groove;
 }
+.update-button{
+  margin-bottom: 5px;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
-.homeLink{
-
 }
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

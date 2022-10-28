@@ -76,6 +76,9 @@ function App() {
       setTotal(total + parseInt(calorie.amount))
     })
   }
+  //Sets opacity
+  const setOpacity = () => {}
+
   return (
     <div className="App">
       <Routes>

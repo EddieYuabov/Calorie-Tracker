@@ -7,12 +7,12 @@ const Main = (props) => {
       
       <div className="forms">
       <form onSubmit={props.handleSubmit}>
-        <h1 className="form-headers">Add Food</h1>
-        <label className="addFoodLabel" htmlFor="name">Food: </label>
+        <h1  className="form-headers">Add Food</h1>
+        <label className="color" htmlFor="name">Food: </label>
         <input className="addFoodInput" id="name" value={props.submit.name} onChange={props.handleSubmitChange} />
         <br/>
         <br/>
-        <label htmlFor="amount"> Calories: </label>
+        <label className="color" htmlFor="amount"> Calories: </label>
         <input
           id="amount"
           value={props.submit.amount}
@@ -25,7 +25,7 @@ const Main = (props) => {
 
       <form onSubmit={props.handleRemove}>
         <h1 className="form-headers">Delete Food</h1>
-        <label className="deleteLabel" htmlFor="id">Id: </label>
+        <label className="color" htmlFor="id">Id: </label>
         <input className="deleteInput" id="id" value = {props.remove.id} onChange={props.handleRemoveChange}/>
         <br/>
         <br/>
@@ -34,19 +34,19 @@ const Main = (props) => {
       
       <form onSubmit={props.handleUpdate}>
       <h1 className="form-headers">Update Food</h1>
-        <label className="updateIdLabel" htmlFor="id">Id: </label>
+        <label className="color" htmlFor="id">Id: </label>
         <input className="updateIdInput" id="id" value={props.update.id} onChange ={props.handleUpdateChange}/>
         <br/>
         <br/>
-        <label className="updateFoodLabel"> Food: </label>
+        <label className="color"> Food: </label>
         <input className="updateFoodInput" id='name' value={props.update.name} onChange={props.handleUpdateChange}/>
         <br/>
         <br/>
-        <label > Calories: </label>
+        <label className="color" > Calories: </label>
         <input  id='amount' value={props.update.amount} onChange={props.handleUpdateChange}/>
         <br/>
         <br/>
-        <button type="submit">Update</button>
+        <button className="update-button" type="submit">Update</button>
       </form>
       </div>
       <div className="output">
@@ -60,8 +60,8 @@ const Main = (props) => {
         </div>
       ))}
       <hr/>
-      <button onClick={props.handleTotal}>Calculate</button>
-      <h2>Total: {props.total}</h2>
+      <button className="calculate-button" onClick={props.handleTotal}>Calculate</button>
+      <h2 className="total" >Total: {props.total}</h2>
       </div>
   
       <Link className="homeLink" to = '/'>Home</Link>
