@@ -47,20 +47,19 @@ margin-right: 350px;
 }
 .forms{
   margin-left: 10px;
-  margin-top: 10px;
+  margin-top: 50px;
   display: flex;
   outline-style: groove;
   outline-color: white;
   background-color: rgb(0, 0, 0,.5);
 }
 .output{
-  margin-right: 10px;
+  margin-right: 25px;
   margin-top: 10px;
   margin-left: 25px;
-  outline-style: groove;
 }
 .update-button{
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }
 .App-logo {
   height: 40vmin;

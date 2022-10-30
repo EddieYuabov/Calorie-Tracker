@@ -57,10 +57,9 @@ const Main = (props) => {
           <h3>Food: {item.name}</h3>
           <h3>Amount of calories: {item.amount}</h3>
           <h5>ID: {item._id}</h5>
-          <br />
+          <hr/>
         </div>
       ))}
-      <hr/>
       <button className="calculate-button" onClick={props.handleTotal}>Calculate</button>
       <h2 className="total" >Total: {props.total}</h2>
       <h2>Goal: {props.goalAmount}</h2>

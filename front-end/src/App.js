@@ -45,6 +45,7 @@ function App() {
     updateRemove({ ...remove, [event.target.id]: event.target.value })
   }
   const handleRemove = async (event) => {
+    event.preventDefault()
     let deleteItem = await axios
       .delete(`http://localhost:3001/calories/${remove.id}`)
       .then((response) => {
@@ -53,6 +54,8 @@ function App() {
       .catch((error) => {
         console.log(error)
       })
+    console.log(deleteItem)
+    updateCalories([...calories])
     updateRemove({ id: '' })
   }
 
